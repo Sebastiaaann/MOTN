@@ -1,0 +1,194 @@
+body {
+  background-color: #d3b1ff; /* Fondo violeta ligero */
+  font-family: Arial, sans-serif;
+ }
+ 
+ .body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+ }
+ @keyframes newBlink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+h2 {
+  animation: 2s newBlink linear infinite; /* Cambia la duración y el nombre de la animación */
+  display: flex;
+  justify-content: center;
+}
+
+
+ h2 {
+  font-size: 3em; /* Aumenta el tamaño del texto */
+  font-family: 'Courier New', Courier, monospace; /* Cambia el tipo de letra */
+}
+
+.cardFront h3.happy {
+  font-size: 2em; /* Aumenta el tamaño del texto */
+  font-family: 'Times New Roman', Times, serif; /* Cambia el tipo de letra */
+}
+ 
+ .birthdayCard:hover {
+  transform: perspective(2500px) rotateY(20deg);
+  }
+ 
+ .birthdayCard {
+  position: relative;
+  width: calc(250px * 1.2); /* Aumenta el ancho en un 30% */
+  height: calc(350px * 1.2); /* Aumenta la altura en un 30% */
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transform: perspective(2500px);
+  transition: 1s;
+ }
+ 
+ .cardFront {
+  position: relative;
+  background-color: #fff;
+  width: calc(250px * 1.2); /* Aumenta el ancho en un 30% */
+  height: calc(350px * 1.2); /* Aumenta la altura en un 30% */
+  overflow: hidden;
+  transform-origin: left;
+  box-shadow: inset 100px 20px 100px rgba(0, 0, 0, .2), 30px 0 50px rgba(0, 0, 0, 0.4);
+  transition: .6s;
+ }
+ 
+ @keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+  }
+  
+  .happy {
+  animation: blink 1s infinite;
+  }
+  
+ .happy {
+  font-family: Tahoma, sans-serif;
+  text-align: center;
+  margin: 30px;
+  background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+  transition: .1s;
+ }
+ 
+ .cardInside {
+  position: absolute;
+  background-color: #fff;
+  width: calc(250px * 1.2); /* Aumenta el ancho en un 30% */
+  height: calc(350px * 1.2); /* Aumenta la altura en un 30% */
+  z-index: -1;
+  left: 0;
+  top: 0;
+  box-shadow: inset 100px 20px 100px rgba(0, 0, 0, 0.2);
+ }
+ 
+ @media only screen and (max-width: 600px) {
+  .Parrafito {
+    font-size: 16px;
+  }
+}
+ p {
+  font-family: cursive;
+  margin: 15px 10px 10px 30px;
+  color: #333;
+ }
+ 
+ .name {
+  position: absolute;
+  left: 150px;
+  /* top: 200px; */
+  color: #333;
+  text-decoration: underline;
+ }
+ 
+ .back {
+  font-family: Tahoma, sans-serif;
+  color: #333;
+  text-align: center;
+  margin: 30px;
+  outline-color: #333;
+  outline-style: dashed;
+ }
+ 
+ .birthdayCard:hover {
+  transform: perspective(2500px) rotate(5deg);
+  box-shadow: inset 100px 20px 100px rgba(0, 0, 0, .2), 0 10px 100px rgba(0, 0, 0, 0.5);
+ }
+ 
+ .birthdayCard:hover .cardFront {
+  transform: rotateY(-160deg);
+ }
+ 
+ .birthdayCard:hover .happy {
+  visibility: hidden;
+ }
+ 
+ @keyframes blink {
+  0% {
+  color: rgb(255, 255, 255);
+  }
+ 
+  20% {
+  color: yellow;
+  }
+ 
+  40% {
+  color: rgb(255, 47, 220);
+  }
+ 
+  60% {
+  color: red;
+  }
+ 
+  80% {
+  color: rgb(246, 100, 173);
+  }
+ 
+  100% {
+    color: rgb(246, 100, 173);  
+  } 
+  }
+
+/* Estilos para iPhones en modo retrato */
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 667px) 
+and (orientation : portrait) { 
+  .birthdayCard {
+    width: 80%; /* Cambia el ancho a un 80% del ancho de la pantalla */
+    height: auto; /* Ajusta la altura automáticamente */
+  }
+}
+
+/* Estilos para iPhones en modo paisaje */
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 667px) 
+and (orientation : landscape) { 
+  .birthdayCard {
+    width: 90%; /* Cambia el ancho a un 90% del ancho de la pantalla */
+    height: auto; /* Ajusta la altura automáticamente */
+  }
+}
+
+
+.gif-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 812px) 
+and (orientation : portrait) { 
+  .gif-container img {
+    width: 40%; /* Ajusta el ancho del GIF al 80% del ancho de la pantalla */
+    height: 40%; /* Ajusta la altura automáticamente */
+    padding-top: 35px;
+  }
+}  
